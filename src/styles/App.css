@@ -41,3 +41,15 @@ button {
   background: #800080;
   border: 3px solid #ffffff;
 }
+
+input {
+  color: #000000;
+}
+
+textarea {
+  color: #000000;
+}
+
+select option {
+  color: #000000;
+}
