@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import calculPourcentage from "../utils/calculPourcentage";
 // importer ICalculTva.ts
 import ICalculTva from "../interfaces/ICalculTva";
 import ComponentInput from "./form/ComponentInput";
+import { UserContext } from "./context/ThemeUserProvider";
 
 const CalculTva: React.FC<any> = () => {
   const calculTvaObject: ICalculTva = {
@@ -57,6 +58,16 @@ const CalculTva: React.FC<any> = () => {
   let type = "text";
   let placeholder = "information";
 
+  //récupérer avec le hook useContext le contenu de UserContext
+  //qui est de type IUserContextProps
+  const useContextValue = useContext(UserContext);
+  if (!useContextValue) {
+    throw new Error("useContext must be used within a UserProvider");
+  }
+  function userName(value: string) {
+    useContextValue?.setUser(value);
+  }
+
   return (
     <>
       <h2> Calculateur de TVA à 10% </h2>
@@ -68,12 +79,14 @@ const CalculTva: React.FC<any> = () => {
         value={calculTvaState.nombreACalculer}
         placeholder="Nombre à calculer"
       ></input>
+      {useContextValue?.user}
       <input
         type="number"
         onChange={(e) => handleChange("tva", parseFloat(e.target.value))}
         value={calculTvaState.tva}
         placeholder="TVA"
       ></input>
+      {useContextValue?.user}
       <input
         type="text"
         onChange={(e) => handleChangeGen2("description", toString())}
@@ -88,6 +101,8 @@ const CalculTva: React.FC<any> = () => {
         value={new Date(calculTvaState.dateCalcul).toDateString()}
         placeholder="Date"
       ></input> */}
+      <button onClick={() => userName("Johnny")}>Change Name 1</button>
+      <button onClick={() => userName("Bob")}>Change Name 2</button>
       <button onClick={() => calculTva()}>Calculer</button>
       <p>Résultat : {result}</p>
       <ComponentInput

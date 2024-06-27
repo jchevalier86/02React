@@ -1,3 +1,6 @@
+import React, { useContext } from "react";
+import { UserContext } from "../context/ThemeUserProvider";
+
 type Props<T> = {
   type: string;
   value: T;
@@ -19,6 +22,13 @@ const ComponentInput: React.FC<Props<any>> = ({
     }
   }
 
+  //récupérer avec le hook useContext le contenu de UserContext
+  //qui est de type IUserContextProps
+  const useContextValue = useContext(UserContext);
+  if (!useContextValue) {
+    throw new Error("useContext must be used within a UserProvider");
+  }
+
   return (
     <div>
       <input
@@ -29,6 +39,7 @@ const ComponentInput: React.FC<Props<any>> = ({
         }}
         placeholder={placeholder}
       ></input>
+      {useContextValue?.user}
     </div>
   );
 };

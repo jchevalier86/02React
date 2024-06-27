@@ -12,11 +12,11 @@ import "./styles/App.css";
 // import Counter from "./components/Counter";
 // import Post from "./components/Post";
 // import ChatRoom from "./components/ChatRoom";
-// import CalculTva from "./components/CalculTva";
+import CalculTva from "./components/CalculTva";
 // import UseRefv1 from "./components/UseRefv1";
 // import UseRefv2 from "./components/UseRefv2";
 // import UseRefv3 from "./components/UseRefv3";
-import UseRefv4 from "./components/UseRefv4";
+// import UseRefv4 from "./components/UseRefv4";
 
 function App() {
   // let greetObject: GreetingProps = { name: "Johnny" };
@@ -61,11 +61,11 @@ function App() {
         </label> */}
 
         {/* <ChatRoom roomId={roomId} /> */}
-        {/* <CalculTva />
-        <UseRefv1 />
+        <CalculTva />
+        {/* <UseRefv1 />
         <UseRefv2 />
         <UseRefv3 /> */}
-        <UseRefv4 />
+        {/* <UseRefv4 /> */}
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
