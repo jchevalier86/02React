@@ -2,7 +2,7 @@ import React /*{ useState }*/ from "react";
 // import logo from "./logo.svg";
 import "./styles/App.css";
 // import {formatDate, formatMail} from './utils/formatStrings';
-//L'appel à partir de app.tsx
+// L'appel à partir de app.tsx
 // import Greetings from "./components/Greetings";
 // import GreetingProps from "./interfaces/GreetingProps";
 // import TestPassFunction from "./components/TestPassFunction";
@@ -10,12 +10,12 @@ import "./styles/App.css";
 // import NameListProps from "./interfaces/NameListProps";
 // import Task from "./interfaces/Task";
 // import Counter from "./components/Counter";
-// // import Post from "./components/Post";
+// import Post from "./components/Post";
 // import ChatRoom from "./components/ChatRoom";
-import CalculTva from "./components/CalculTva";
-import UseRefv1 from "./components/UseRefv1";
-import UseRefv2 from "./components/UseRefv2";
-import UseRefv3 from "./components/UseRefv3";
+// import CalculTva from "./components/CalculTva";
+// import UseRefv1 from "./components/UseRefv1";
+// import UseRefv2 from "./components/UseRefv2";
+// import UseRefv3 from "./components/UseRefv3";
 import UseRefv4 from "./components/UseRefv4";
 
 function App() {
@@ -61,10 +61,10 @@ function App() {
         </label> */}
 
         {/* <ChatRoom roomId={roomId} /> */}
-        <CalculTva />
+        {/* <CalculTva />
         <UseRefv1 />
         <UseRefv2 />
-        <UseRefv3 />
+        <UseRefv3 /> */}
         <UseRefv4 />
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
