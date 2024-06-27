@@ -53,3 +53,20 @@ textarea {
 select option {
   color: #000000;
 }
+
+.redInput {
+  background: #ff0000;
+}
+
+.underlineText {
+  text-decoration: underline;
+  color: #ff0000;
+}
+
+.backgroundText {
+  background: #0000ff;
+}
+
+.webStyle {
+  background: #ff0000;
+}
