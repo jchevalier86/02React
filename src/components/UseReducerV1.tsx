@@ -11,19 +11,19 @@ const Counter: React.FC = () => {
   return (
     <div>
       <p>Count: {state.count}</p>
-      {/* <p>
+      <p>
         Civilité:
         {state.civilite?.map((value: string, index) => (
           <div key={index}>{value}</div>
         ))}
-      </p> */}
-      <select>
+      </p>
+      {/* <select>
         {state.civilite?.map((option, index) => (
           <option key={index} value={option}>
             {option}
           </option>
         ))}
-      </select>
+      </select> */}
       <br />
       <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
       <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>

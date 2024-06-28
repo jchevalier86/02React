@@ -20,6 +20,7 @@ import "./styles/App.css";
 // import PreviousValue from "./components/PreviousValue";
 import UseContextV1 from "./components/UseContextV1";
 import UseReducerV1 from "./components/UseReducerV1";
+// import UseMemoV1 from "./components/UseMemoV1";
 
 function App() {
   // let greetObject: GreetingProps = { name: "Johnny" };
@@ -72,6 +73,7 @@ function App() {
         {/* <PreviousValue /> */}
         <UseContextV1 />
         <UseReducerV1 />
+        {/* <UseMemoV1 /> */}
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
