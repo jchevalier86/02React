@@ -1,4 +1,10 @@
-import React, { createContext, useState, ReactNode, useReducer } from "react";
+import React, {
+  createContext,
+  useState,
+  ReactNode,
+  useReducer,
+  useEffect,
+} from "react";
 import IState from "../../interfaces/reducer/IState";
 import reducerTraitement from "../../reducers/reducerTraitement";
 
@@ -6,7 +12,7 @@ import reducerTraitement from "../../reducers/reducerTraitement";
 interface IUserContextProps {
   user: string;
   setUser: React.Dispatch<React.SetStateAction<string>>;
-  civilite?: string;
+  civilite?: string[];
 }
 
 // le user context qui permet de récupérer les données dans les composants enfants
@@ -22,13 +28,15 @@ export const ThemeUserProvider: React.FC<{ children: ReactNode }> = ({
   const [user, setUser] = useState("bob");
 
   const [state, dispatch] = useReducer(reducerTraitement, initialState);
-  dispatch({ type: "civilite" });
+  useEffect(() => {
+    dispatch({ type: "civilite" });
+  }, []);
   let civilite = state.civilite;
-  // {civilite:["M", "MME", "Autre"]}
+  // {civilite:["M", "MME", "Autre"]};
 
   //créé Provider à partir du UserContext
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ user, setUser, civilite }}>
       {children}
     </UserContext.Provider>
   );
