@@ -17,6 +17,9 @@ import CalculTva from "./components/CalculTva";
 // import UseRefv2 from "./components/UseRefv2";
 // import UseRefv3 from "./components/UseRefv3";
 // import UseRefv4 from "./components/UseRefv4";
+// import PreviousValue from "./components/PreviousValue";
+// import UseContextV1 from "./components/UseContextV1";
+import UseReducerV1 from "./components/UseReducerV1";
 
 function App() {
   // let greetObject: GreetingProps = { name: "Johnny" };
@@ -66,6 +69,9 @@ function App() {
         <UseRefv2 />
         <UseRefv3 /> */}
         {/* <UseRefv4 /> */}
+        {/* <PreviousValue /> */}
+        {/* <UseContextV1 /> */}
+        <UseReducerV1 />
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.

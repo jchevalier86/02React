@@ -42,7 +42,7 @@ const CalculTva: React.FC<any> = () => {
   //   setCalculTvaState({ ...calculTvaState, [attribut]: value });
   // }
 
-  function handleChangeGen2<T>(attribut: string, value: string) {
+  function handleChangeGen2(attribut: string, value: string) {
     setCalculTvaState({ ...calculTvaState, [attribut]: value });
   }
   function calculTva() {
@@ -55,11 +55,11 @@ const CalculTva: React.FC<any> = () => {
   // deux input fields
   // bouton de validation avec un intitulé "calculer"
   // afficher le "résultat"
-  let type = "text";
+  // let type = "text";
   let placeholder = "information";
 
-  //récupérer avec le hook useContext le contenu de UserContext
-  //qui est de type IUserContextProps
+  // récupérer avec le hook useContext le contenu de UserContext
+  // qui est de type IUserContextProps
   const useContextValue = useContext(UserContext);
   if (!useContextValue) {
     throw new Error("useContext must be used within a UserProvider");
@@ -98,7 +98,7 @@ const CalculTva: React.FC<any> = () => {
         onChange={(e) =>
           handleChangeGen("dateCalcul", Date.parse(e.target.value))
         }
-        value={new Date(calculTvaState.dateCalcul).toDateString()}
+        value={new Date (calculTvaState.dateCalcul).toDateString()}
         placeholder="Date"
       ></input> */}
       <button onClick={() => userName("Johnny")}>Change Name 1</button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import IPost from "../interfaces/IPost";
 import userFetch from "../utils/userFetch";
 // interface GreetingProps {
